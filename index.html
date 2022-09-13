@@ -32,34 +32,41 @@
   </header>
   <main class="wrapper">
     <div class="banner">
-      <h1>Hi, I'm Winnie!</h1>
-      <p>a fullstack developer with a passion for creating accessible and inclusive digital spaces and products</p>
+      <div class="banner-content">
+        <h1>Hi, I'm Winnie!</h1>
+        <p>a fullstack developer with a passion for creating accessible and inclusive digital spaces and products</p>
+      </div>
+      <img src="images/banner_picture.jpeg" alt="Winnie and her dog Emi">
     </div>
     <section id="projects">
       <h2>Projects</h2>
-      <article class="project">
-        <div class="project-card">
-          <a href="https://www.ficelle.ca" target="_blank">
-            <div class="project-card-content">
+      <div class="project-cards">
+        <article class="project">
+          <a href="https://youtu.be/0eKgUN9csFw?t=909" id="demo-link">Watch the demo!</a>
+          <a href="https://www.ficelle.ca" target="_blank" class="project-card-link">
+            <div class="project-card">
               <img src="images/ficelle.png" alt="preview of ficelle project">
-              <h3 class="project-name">ficelle</h3>
-              <p class="project-skills">Ruby on Rails / HTML5 / SASS / Stimulus.js / Figma / Github / Agile</p>
-              <p class="project-description">ficelle is a web app that curates and delivers romantic events on behalf of the user. It was developed in a 2-week sprint as the final project for the Le Wagon bootcamp. </p>
-              <!-- <a href="https://youtu.be/0eKgUN9csFw?t=909">Watch the demo!</a> -->
+              <div class="project-card-content">
+                <h3 class="project-name">ficelle</h3>
+                <p class="project-skills">Ruby on Rails / HTML5 / SASS / Stimulus.js / Figma / Github / Agile</p>
+                <p class="project-description">ficelle is a web app that curates and delivers romantic events on user's behalf. It was developed in a 2-week sprint as the final project for the Le Wagon bootcamp. </p>
+              </div>
             </div>
           </a>
-        </div>
-      </article>
-      <article class="project">
-        <div class="project-card">
-          <a href="https://airboonboo.herokuapp.com" target="_blank">
-            <img src="images/airboonboo.png" alt="preview of AirBooNBoo project">
-            <h3 class="project-name">AirBooNBoo</h3>
-            <p class="project-skills">Ruby on Rails / HTML5 / CSS / Javascript / Github / Agile</p>
-            <p class="project-description">AirBooNBoo is a marketplace that connects users with the perfect ghost for their spooking needs.</p>
+        </article>
+        <article class="project">
+          <a href="https://airboonboo.herokuapp.com" target="_blank" class="project-card-link">
+            <div class="project-card">
+              <img src="images/airboonboo.png" alt="preview of AirBooNBoo project">
+              <div class="project-card-content">
+                <h3 class="project-name">AirBooNBoo</h3>
+                <p class="project-skills">Ruby on Rails / HTML5 / CSS / Javascript / Github / Agile</p>
+                <p class="project-description">AirBooNBoo is a marketplace that connects users with the perfect ghost for their spooking needs.</p>
+              </div>
+            </div>
           </a>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
     <section id="about">
       <h2>Get to know me</h2>
@@ -68,7 +75,7 @@
       <p class="about-skills">Skills</p>
       <p class="about-learning">Currently learning</p>
     </section>
-    <section class="contact">
+    <section id="contact">
       <h2>Get in touch</h2>
       <ul>
         <li>
