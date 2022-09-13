@@ -13,79 +13,86 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="wrapper">
       <menu>
         <li>
           <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </menu>
     </nav>
-    <div class="banner">
-      <h1>Winnie Zhao</h1>
-      <p>Fullstack Developer</p>
-    </div>
   </header>
-  <section id="projects">
-    <h2>Projects</h2>
-    <article class="project">
-      <img src="#" alt="preview of project">
-      <h3 class="project-name">Project name</h3>
-      <p class="project-skills">Project skills</p>
-      <p class="project-description">Project description</p>
-    </article>
-    <article class="project">
-      <img src="#" alt="preview of project">
-      <h3 class="project-name">Project name</h3>
-      <p class="project-skills">Project skills</p>
-      <p class="project-description">Project description</p>
-    </article>
-    <article class="project">
-      <img src="#" alt="preview of project">
-      <h3 class="project-name">Project name</h3>
-      <p class="project-skills">Project skills</p>
-      <p class="project-description">Project description</p>
-    </article>
-  </section>
-  <section id="about">
-    <h2>Hey! I'm Winnie</h2>
-    <img src="#" alt="profile picture of Winnie">
-    <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptates.</p>
-    <p class="about-skills">all my skills</p>
-    <p class="about-learning">current learning</p>
-  </section>
-  <section class="contact">
-    <h2>Get in touch</h2>
-    <ul>
-      <li>
-        <a href="#">Linkedin</a>
-      </li>
-      <li>
-        <a href="#">Email</a>
-      </li>
-      <li>
-        <a href="#">Github</a>
-      </li>
-    </ul>
-    <form action="">
-      <label for="name">Name</label>
-      <input type="text" id="name">
-      <label for="email">Email</label>
-      <input type="text" id="email">
-      <label for="message">Message</label>
-      <textarea id="message"></textarea>
-      <input type="submit" value="Submit">
-    </form>
-  </section>
-  <footer>
+  <main class="wrapper">
+    <div class="banner">
+      <h1>Hi, I'm Winnie!</h1>
+      <p>a fullstack developer with a passion for creating accessible and inclusive digital spaces and products</p>
+    </div>
+    <section id="projects">
+      <h2>Projects</h2>
+      <article class="project">
+        <div class="project-card">
+          <a href="https://www.ficelle.ca" target="_blank">
+            <div class="project-card-content">
+              <img src="images/ficelle.png" alt="preview of ficelle project">
+              <h3 class="project-name">ficelle</h3>
+              <p class="project-skills">Ruby on Rails / HTML5 / SASS / Stimulus.js / Figma / Github / Agile</p>
+              <p class="project-description">ficelle is a web app that curates and delivers romantic events on behalf of the user. It was developed in a 2-week sprint as the final project for the Le Wagon bootcamp. </p>
+              <!-- <a href="https://youtu.be/0eKgUN9csFw?t=909">Watch the demo!</a> -->
+            </div>
+          </a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-card">
+          <a href="https://airboonboo.herokuapp.com" target="_blank">
+            <img src="images/airboonboo.png" alt="preview of AirBooNBoo project">
+            <h3 class="project-name">AirBooNBoo</h3>
+            <p class="project-skills">Ruby on Rails / HTML5 / CSS / Javascript / Github / Agile</p>
+            <p class="project-description">AirBooNBoo is a marketplace that connects users with the perfect ghost for their spooking needs.</p>
+          </a>
+        </div>
+      </article>
+    </section>
+    <section id="about">
+      <h2>Get to know me</h2>
+      <img src="images/profile_picture.jpeg" alt="profile picture of Winnie">
+      <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, voluptates.</p>
+      <p class="about-skills">Skills</p>
+      <p class="about-learning">Currently learning</p>
+    </section>
+    <section class="contact">
+      <h2>Get in touch</h2>
+      <ul>
+        <li>
+          <a href="#">Linkedin</a>
+        </li>
+        <li>
+          <a href="#">Email</a>
+        </li>
+        <li>
+          <a href="#">Github</a>
+        </li>
+      </ul>
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+  <footer class="wrapper">
     <p>Developed with <i class="fa-solid fa-heart"></i> by Winnie Zhao</p>
   </footer>
 </body>
