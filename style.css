@@ -11,7 +11,8 @@ body {
   color: #111122;
   background-color: #FAF9F7;
   text-align: left;
-  min-height: 100vh;
+  height: 100%;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, ul {
@@ -32,6 +33,11 @@ section {
   padding-top: calc(110px + 1rem);
 }
 
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
 .wrapper {
   width: 75%;
   margin: 0 auto;
@@ -39,6 +45,7 @@ section {
 
 main {
   padding-top: 110px;
+  padding-bottom: 60px;
 }
 
 /* header styling */
@@ -137,7 +144,7 @@ menu li a:active, .contact-links a:active {
   grid-gap: 2rem;
 }
 
-@media(max-width: 1138px) {
+@media(max-width: 1203px) {
   .project-cards {
     grid-template-columns: 1fr;
   }
@@ -156,7 +163,7 @@ menu li a:active, .contact-links a:active {
   top: 1rem;
   left: 1rem;
   background-color: #F3EBFF;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border: 2px solid #111122;
   border-radius: 2rem;
   font-size: 0.75rem;
@@ -336,10 +343,10 @@ menu li a:active, .contact-links a:active {
 
 footer {
   border-top: 2px solid #111122;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 60px;
-  bottom: 0;
   padding: 1rem;
   background-color: #E6F2DF;
   display: flex;
