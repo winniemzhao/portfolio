@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", "Arial", "Helvetica", sans-serif;
+  font-family: "Atkinson Hyperlegible", "Raleway", "Arial", "Helvetica", sans-serif;
   color: #111122;
   background-color: #FAF9F7;
   text-align: left;
@@ -30,7 +30,7 @@ h2 {
 }
 
 section {
-  padding-top: calc(110px + 1rem);
+  padding-top: calc(95px + 1rem);
 }
 
 .container {
@@ -44,7 +44,7 @@ section {
 }
 
 main {
-  padding-top: 110px;
+  padding-top: 95px;
   padding-bottom: 60px;
 }
 
@@ -62,7 +62,7 @@ header {
 
 menu {
   margin: 0;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -108,14 +108,17 @@ menu li a:active, .contact-links a:active {
 /* banner styling */
 
 .banner {
-  height: calc(100vh - 220px);
-  padding-top: 110px;
+  height: calc(100vh - 190px);
+  padding-top: 95px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "banner-content banner-image";
   grid-gap: 2rem;
 }
 
 .banner-content {
+  grid-area: banner-content;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -124,6 +127,7 @@ menu li a:active, .contact-links a:active {
 .banner-content h1 {
   font-weight: 800px;
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .banner-content p {
@@ -132,6 +136,7 @@ menu li a:active, .contact-links a:active {
 }
 
 .banner-image {
+  grid-area: banner-image;
   display: flex;
   align-items: center;
 }
@@ -141,6 +146,7 @@ menu li a:active, .contact-links a:active {
   border: 2px solid #111122;
   width: 100%;
   max-height: 100%;
+  display: inline-block;
 }
 
 /* project section styling */
@@ -313,9 +319,10 @@ menu li a:active, .contact-links a:active {
 
 .about-content {
   display: grid;
+  grid-template-columns: 2.5fr 2fr 2fr;
   grid-template-areas:
-    "my-picture my-picture about-me about-me"
-    "my-picture my-picture skills-current skills-learning";
+    "my-picture about-me about-me"
+    "my-picture skills-current skills-learning";
   grid-gap: 2rem;
 }
 
@@ -323,7 +330,7 @@ menu li a:active, .contact-links a:active {
 /* contact section styling */
 
 #contact {
-  margin-bottom: calc(110px + 1rem);
+  margin-bottom: calc(95px + 1rem);
 }
 
 .contact-links {
@@ -351,14 +358,22 @@ footer {
   @media(max-width: 973px) {
     .banner {
       grid-template-columns: 1fr;
+      grid-template-areas:
+      "banner-content"
+      "banner-image";
     }
 
     .about-content {
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
       "my-picture my-picture"
       "about-me about-me"
       "skills-current skills-learning";
     }
+
+    /* .about-content img {
+      width: 50%;
+    } */
   }
 
   @media(max-width: 1203px) {
