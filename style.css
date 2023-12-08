@@ -33,10 +33,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-section {
-  padding-top: calc(95px + 1rem);
-}
-
 .container {
   min-height: 100vh;
   position: relative;
@@ -50,6 +46,10 @@ section {
 main {
   padding-top: 95px;
   padding-bottom: 60px;
+}
+
+#about, #contact {
+  padding-top: calc(95px + 1rem);
 }
 
 /* header styling */
@@ -113,7 +113,7 @@ menu li a:active, .contact-links a:active {
 
 .banner {
   height: calc(100vh - 190px);
-  padding-top: 95px;
+  /* padding-top: 95px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -198,10 +198,6 @@ menu li a:active, .contact-links a:active {
   color: #111122;
 }
 
-.project-card-link:hover {
-  transform: scale(1.1);
-}
-
 .project-card {
   background-color: #FFF;
   border: 2px solid #111122;
@@ -213,6 +209,11 @@ menu li a:active, .contact-links a:active {
   justify-content: flex-start;
   align-items: center;
   background-color: #E5EFFB;
+}
+
+.project-card:hover  {
+  transform: scale(1.005);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .project-card img {
@@ -246,7 +247,6 @@ menu li a:active, .contact-links a:active {
 
 /* about section styling */
 
-
 .about-content img {
   grid-area: my-picture;
   width: 100%;
@@ -265,8 +265,6 @@ menu li a:active, .contact-links a:active {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .about-me p {
@@ -287,6 +285,14 @@ menu li a:active, .contact-links a:active {
   padding: 2rem;
 }
 
+.about-skills-certifications {
+  grid-area: skills-certifications;
+  background-color: #E5EFFB;
+  border: 2px solid #111122;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
 .about-skills-learning {
   grid-area: skills-learning;
   background-color: #FEEBDD;
@@ -295,39 +301,40 @@ menu li a:active, .contact-links a:active {
   padding: 2rem;
 }
 
-.about-skills-current h3, .about-skills-learning h3 {
+.about-skills-current h3, .about-skills-learning h3, .about-skills-certifications h3 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.about-skills-current li, .about-skills-learning li {
+.about-skills-current li, .about-skills-learning li, .about-skills-certifications li {
   margin-top: 0.75rem;
   display: flex;
   align-items: center;
+  line-height: 1.35;
 }
 
-.about-skills-current i,  .about-skills-learning i {
+.about-skills-current i,  .about-skills-learning i, .about-skills-certifications i {
   width: 8%;
   margin-right: 0.25rem;
 }
 
-.about-skills-current p,  .about-skills-learning p {
+.about-skills-current p,  .about-skills-learning p, .about-skills-certifications p {
   padding-left: 0.5rem;
-}
-
-.about-skills-learning p:last-of-type {
-  line-height: 1.5;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 2.5fr 2fr 2fr;
   grid-template-areas:
-    "my-picture about-me about-me"
+    "about-me about-me about-me"
+    "my-picture skills-current skills-certifications"
     "my-picture skills-current skills-learning";
   grid-gap: 2rem;
 }
 
+.fa-arrow-up-right-from-square {
+  margin-left: 0.5rem;
+}
 
 /* contact section styling */
 
@@ -357,29 +364,49 @@ footer {
 
 /* media queries */
 
-  @media(max-width: 973px) {
-    .banner {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-      "banner-content"
-      "banner-image";
-    }
-
-    .about-content {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-      "my-picture my-picture"
-      "about-me about-me"
-      "skills-current skills-learning";
-    }
-
-    /* .about-content img {
-      width: 50%;
-    } */
-  }
-
   @media(max-width: 1203px) {
     .project-cards {
       grid-template-columns: 1fr;
+    }
+
+    main {
+      padding-top: 200px;
+    }
+  }
+
+  @media(max-width: 973px) {
+    .banner-image {
+      display: none;
+    }
+
+    .banner-content {
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .banner {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "banner-content";
+      height: 100%
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "my-picture"
+      "about-me"
+      "skills-current"
+      "skills-certifications "
+      "skills-learning"
+      ;
+    }
+
+    #about, #contact, #projects{
+      padding-top: calc(40px + 1rem);
+    }
+
+    main {
+      padding-top: 300px;
     }
   }
